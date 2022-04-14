@@ -1,8 +1,8 @@
 const path = require('path')
 const fs = require('fs')
 
-const envTestURI = path.join(__dirname, '..', '.env.test')
-const envLocalURI = path.join(__dirname, '..', '.env')
+const envTestURI = path.join(__dirname, '..', '..', '.env.test')
+const envLocalURI = path.join(__dirname, '..', '..', '.env')
 
 try {
     if (process.env.NODE_ENV !== 'production') {

@@ -4,7 +4,7 @@ const Lab = require('@hapi/lab')
 const { expect } = Code
 const { suite, test, beforeEach, afterEach } = exports.lab = Lab.script()
 
-const { init } = require('../lib/server')
+const { init } = require('../src/lib/server')
 
 suite('nombres', () => {
     let server
