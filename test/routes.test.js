@@ -55,4 +55,30 @@ suite('nombres', () => {
         expect(payload).to.include(['sexo', 'nombre'])
         expect(payload).to.include({ sexo: 'hombre' })
     })
+
+    test('regresa error por valor de query erronea', { skip: false }, async () => {
+        const res = await server.inject({
+            method: 'GET',
+            url: '/api/v1/nombre?sexo=xD',
+        })
+        const payload = JSON.parse(res.payload)
+
+        expect(res.statusCode).to.equal(400)
+        expect(payload).to.be.object()
+        expect(payload).to.include(['message', 'error'])
+        expect(payload).to.include({ message: 'Invalid request query input' })
+    })
+
+    test('regresa error por valor de query erronea', { skip: false }, async () => {
+        const res = await server.inject({
+            method: 'GET',
+            url: '/api/v1/nombre?setso=en-etseso',
+        })
+        const payload = JSON.parse(res.payload)
+
+        expect(res.statusCode).to.equal(400)
+        expect(payload).to.be.object()
+        expect(payload).to.include(['message', 'error'])
+        expect(payload).to.include({ message: 'Invalid request query input' })
+    })
 })
