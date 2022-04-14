@@ -1,0 +1,29 @@
+{
+  "name": "generador-nombres-mexico",
+  "version": "0.1.0",
+  "author": "Ixe Fernández",
+  "license": "MIT",
+  "description": "Generador de nombres aleatorios (México)",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index -e js",
+    "test-html": "lab -C -v test/ -r html -o doc/coverage.html",
+    "test-code": "lab -C -t 100 -v test/",
+    "test": "lab -C -v test/"
+  },
+  "dependencies": {
+    "@hapi/boom": "^9.1.4",
+    "@hapi/hapi": "^20.2.1",
+    "@joi/date": "^2.1.0",
+    "dotenv": "^16.0.0",
+    "fast-csv": "^4.3.6",
+    "joi": "^17.6.0",
+    "qs": "^6.10.3",
+    "underscore": "^1.13.2"
+  },
+  "devDependencies": {
+    "@hapi/code": "^8.0.7",
+    "@hapi/lab": "^24.6.0",
+    "nodemon": "^2.0.15"
+  }
+}
