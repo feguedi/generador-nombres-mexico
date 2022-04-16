@@ -1,6 +1,6 @@
 const Boom = require('@hapi/boom')
 const _ = require('underscore')
-const nombresObj = require('../../data/nombres_2020.json')
+const nombresObj = require('../data/nombres_2020.json')
 const errorHandler = require('../helpers/errors')
 
 exports.obtenerNombreV1 = async ({ sexo }) => {

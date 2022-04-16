@@ -22,6 +22,7 @@ exports.init = async () => {
         await server.initialize()
         return server
     } catch (error) {
+        console.error('Error server.init', error)
     }
 }
 
